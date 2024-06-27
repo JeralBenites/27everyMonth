@@ -18,22 +18,22 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="theme-color" content="#F26B38">
     <style>
-         body {
+        body {
             margin: 0;
             overflow: hidden;
         }
-        #player {
+
+        #spotify-player {
             position: absolute;
-            width: 0;
-            height: 0;
-            top: 0;
-            left: 0;
+            width: 300px;
+            bottom: 10px;
+            right: 10px;
         }
+
     </style>
 </head>
 
 <body>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=WwcCqZOGRwEm61gS&amp;list=PLz2WinjBUXrrOxiUG2jK-3g5GHu6NjKZp&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <br>
     <br>
     <br>
@@ -43,25 +43,25 @@
         <div id="card-inside">
             <div class="wrap wishesFont">
                 <center>
-                    <p> A smart child, a lovely house, two lucky vocations and an amazing family – life appears to have
-                        given you both the ideal anniversary blessing. Happy WedLocks Day! &nbsp; </p>
-                    <p> It’s time to celebrate this wonderful milestone in your life. Another year of challenges
-                        overcome, and a new year to make new memories together.
-                        <br>
-                    <p> Just wanna say you Something</p>
-                    Aap dono ki jodi kabhi na tute. Khuda kare aap ek dusre se kabhi na ruthe Yuni ek hokar aap ye
-                    zindagi bitayein, ki Aap dono se khushyion ke ek pal bhi na chute.
+                    <p> Mi Roda, mi bartolita, no llego a darme cuenta como me llegue a enamorar tanto de ti </p>
+                    <p> fue tu sonrisa?, fue tu forma de ser?, fue la forma en que te fui conociendo y como se dieron
+                        las cosas? </p>
+                    <br>
+                    <p> Lo unico que se, es que te quiro mucho y ya no me imagino una dia sin ti</p>
+                    <p> Feliz segundo aniversario mi vida entera, quiero tenerte muchos aniversarios mas, quiero que
+                        siempre seas mi bartolita hermosa,
+                        quiero que seas mi vida
                     </p>
                 </center>
-                <p class="signed">With Best Wishes
-                    <br> Smile Gupta
+                <p class="signed">Te quiero mucho
+                    <br> Rodail Chavez Rugel
                 </p>
 
             </div>
         </div>
         <div id="card-front">
             <div class="wrap">
-                <h1>Happy Anniversary</h1>
+                <h1>Feliz Aniversario mi Bartolita</h1>
                 <div class="cake_and_velas">
                     <div class="velas">
                         <div class="fuego"></div>
@@ -114,22 +114,26 @@
                     </svg>
                 </div>
             </div>
-            <button id="open" data-balloon="Click to Open Card!" data-balloon-length="medium" data-balloon-pos="left"
+            <button id="open" data-balloon="Click Para Abrir" data-balloon-length="medium" data-balloon-pos="left"
                 data-balloon-visible>&gt;</button>
-            <button id="close" data-balloon="! bɿɒɔ ɘƨolɔ oɈ ʞɔilƆ" data-balloon-length="medium" data-balloon-pos="left"
+            <button id="close" data-balloon="ʞɔilƆ" data-balloon-length="medium" data-balloon-pos="left"
                 data-balloon-visible>&lt;</button>
 
             <div class="card-front_inside">
-                <br> <br> <br>
                 <div class="polaroid">
-                    <div class="img" style="background-image: url('img/1.jpg')"></div>
+                    <div class="img" style="background-image: url('img/12.png')"></div>
                 </div>
             </div>
 
         </div>
-        <script src="js/index.js"></script>
+    </div>
+    <div id="spotify-player">
+         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5T5SDiLaCZakdqxq3Tb3j7?utm_source=generator&autoplay=1" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  
+    </div>
+    <script src="js/index.js"></script>
 
-        
+
 </body>
 
 </html>
