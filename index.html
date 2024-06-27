@@ -18,21 +18,23 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="theme-color" content="#F26B38">
     <style>
-        body {
+         body {
             margin: 0;
             overflow: hidden;
         }
-
         #player {
             position: absolute;
-            top: -5000px;
-            /* Ubicar fuera de la vista */
+            width: 0;
+            height: 0;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 
 <body>
-    <div id="player"></div>
+    <iframe id="player" width="0" height="0" src="https://www.youtube.com/embed/videoseries?list=PLz2WinjBUXrrOxiUG2jK-3g5GHu6NjKZp&autoplay=1&loop=1&controls=0&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
     <br>
     <br>
     <br>
@@ -128,37 +130,7 @@
         </div>
         <script src="js/index.js"></script>
 
-        <script>
-            // Cargar la API del reproductor de YouTube
-            var tag = document.createElement('script');
-            tag.src = "https://www.youtube.com/iframe_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    
-            // Crear el reproductor de YouTube
-            var player;
-            function onYouTubeIframeAPIReady() {
-                player = new YT.Player('player', {
-                    height: '0',
-                    width: '0',
-                    playerVars: {
-                        'listType': 'playlist',
-                        'list': 'PLz2WinjBUXrrOxiUG2jK-3g5GHu6NjKZp', // ID de la lista de reproducción
-                        'autoplay': 1,
-                        'controls': 0,
-                        'loop': 1,
-                        'mute': 1
-                    },
-                    events: {
-                        'onReady': onPlayerReady
-                    }
-                });
-            }
-    
-            function onPlayerReady(event) {
-                event.target.playVideo();
-            }
-        </script>
+        
 </body>
 
 </html>
