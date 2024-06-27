@@ -17,9 +17,22 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <meta name="theme-color" content="#F26B38">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #player {
+            position: absolute;
+            top: -5000px;
+            /* Ubicar fuera de la vista */
+        }
+    </style>
 </head>
 
-<body>  <div id="player"></div>
+<body>
+    <div id="player"></div>
     <br>
     <br>
     <br>
@@ -107,46 +120,45 @@
 
             <div class="card-front_inside">
                 <br> <br> <br>
-                 <div class="polaroid">
+                <div class="polaroid">
                     <div class="img" style="background-image: url('img/1.jpg')"></div>
-                </div> 
+                </div>
             </div>
 
         </div>
         <script src="js/index.js"></script>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        // Cargar la API del reproductor de YouTube
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        // Crear el reproductor de YouTube
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-                height: '0',
-                width: '0',
-                playerVars: {
-                    'listType': 'playlist',
-                    'list': 'PLz2WinjBUXrrOxiUG2jK-3g5GHu6NjKZp', // ID de la lista de reproducción
-                    'autoplay': 1,
-                    'controls': 0,
-                    'loop': 1,
-                    'mute': 1
-                },
-                events: {
-                    'onReady': onPlayerReady
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            event.target.playVideo();
-        }
-    </script>
+        <script>
+            // Cargar la API del reproductor de YouTube
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+            // Crear el reproductor de YouTube
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    height: '0',
+                    width: '0',
+                    playerVars: {
+                        'listType': 'playlist',
+                        'list': 'PLz2WinjBUXrrOxiUG2jK-3g5GHu6NjKZp', // ID de la lista de reproducción
+                        'autoplay': 1,
+                        'controls': 0,
+                        'loop': 1,
+                        'mute': 1
+                    },
+                    events: {
+                        'onReady': onPlayerReady
+                    }
+                });
+            }
+    
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+        </script>
 </body>
 
 </html>
